@@ -2,7 +2,7 @@
 // C1 初學者只改這裡，就能看到畫面熱更新，不需要碰 React 元件與動畫背景。
 
 export const brand = {
-  name: 'GYOZA WOOD',
+  name: 'GYOZA WOOD｜Sophie',
   badge: 'CAMPUS GYOZA OPS',
   tagline: '把訂單、備料、LINE 通知與交付驗收收進同一個鍋貼店控制台。',
   description:
