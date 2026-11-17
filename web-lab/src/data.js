@@ -11,7 +11,7 @@ export const brand = {
   // 首頁主圖。把你的鍋貼照片放進 web-lab/public/images/，再把路徑填在這裡，
   // 例如 '/images/my-gyoza.jpg'。留空字串就顯示預設插畫——不填也不會壞。
   // 路徑要以 / 開頭，檔名建議用英文小寫。詳見 U1/STEP-02.md。
-  heroImage: '',
+  heroImage: '/images/my-gyoza.jpg',
 };
 
 export const courseModules = [
