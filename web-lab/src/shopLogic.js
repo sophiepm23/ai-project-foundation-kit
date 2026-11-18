@@ -73,6 +73,19 @@ export function buildActionQueue(items, orderItems) {
   // 目標：從 orderItems 找出 channel === 'LINE OA' 且 status !== '已取餐' 的訂單。
   // 驗收：action queue 出現「LINE OA 訂單需要主動聯絡客人」，而且數字必須由資料算出來。
 
+  const lineOpenOrders = orderItems.filter(
+    (order) => order.channel === 'LINE OA' && order.status !== '已取餐',
+  );
+
+  if (lineOpenOrders.length > 0) {
+    const firstOrder = lineOpenOrders[0];
+    actions.push({
+      level: 'warning',
+      title: 'LINE OA 訂單需要主動聯絡客人',
+      detail: `共 ${lineOpenOrders.length} 筆未取餐，優先聯絡 ${firstOrder.customer}（${firstOrder.id} / ${firstOrder.status} / ETA ${firstOrder.eta}）`,
+    });
+  }
+
   return actions;
 }
 
